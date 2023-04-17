@@ -19,9 +19,6 @@ public class ProfileController {
     public String profile() {
         //현재 동작중인 프로파일의 이름을 반환
         return Arrays.stream(env.getActiveProfiles()).findFirst().orElse("");
-        //env.getActiveProfiles()
-        //현재 실행 중인 ActiveProfile을 모두 가져온다.
-        //즉, real, real1, real2등이 활성화되어 있다면(active) 3개가 모두 담겨 있다.
     }
 
     //무중단배포 테스트를 위한 version 확인용. 새로고침하면 return 값이 자동으로 바뀌는지
